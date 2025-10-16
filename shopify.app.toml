@@ -1,0 +1,31 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+name = "3best-product-importer"
+client_id = "9e0973646f604a30d7b03adf47ebb56e"
+application_url = "https://your-app-url.com"
+embedded = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "write_products,read_products,write_inventory,read_inventory"
+
+[auth]
+redirect_urls = [
+  "https://your-app-url.com/auth/callback",
+  "https://your-app-url.com/auth/shopify/callback",
+  "https://your-app-url.com/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2023-10"
+
+[pos]
+embedded = false
+
+[[webhooks.subscriptions]]
+topics = [ "products/create", "products/update" ]
+uri = "/webhooks/products"
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "stresnazahrada.myshopify.com"

@@ -1,0 +1,33 @@
+{
+  "name": "3best-product-importer",
+  "version": "1.0.0",
+  "description": "A Shopify app for importing products from Excel files",
+  "main": "web/index.js",
+  "scripts": {
+    "build": "shopify app build",
+    "dev": "shopify app dev",
+    "deploy": "shopify app deploy",
+    "generate": "shopify app generate"
+  },
+  "dependencies": {
+    "@shopify/cli": "^3.73.1",
+    "express": "^4.18.2",
+    "multer": "^1.4.5-lts.1",
+    "xlsx": "^0.18.5",
+    "csv-parser": "^3.0.0",
+    "csv-writer": "^1.6.0",
+    "@shopify/shopify-api": "^7.5.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "keywords": [
+    "shopify",
+    "app",
+    "product-import",
+    "excel",
+    "csv"
+  ],
+  "author": "3Best",
+  "license": "MIT"
+}
