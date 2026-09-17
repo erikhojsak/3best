@@ -71,6 +71,21 @@ HOST=your_app_host
 PORT=3000
 ```
 
+### Product Analytics (PostHog)
+
+Set `POSTHOG_API_KEY` to your PostHog project API key to turn on analytics. The
+web page then sends a page view on load and one outcome event per import
+attempt. The app sends counts only. It never sends file names, product codes, or
+prices. When `POSTHOG_API_KEY` is not set, the app runs with no analytics.
+
+```bash
+POSTHOG_API_KEY=your_posthog_project_api_key
+POSTHOG_HOST=https://eu.i.posthog.com
+```
+
+`POSTHOG_HOST` is optional. It defaults to `https://eu.i.posthog.com`. Use
+`https://us.i.posthog.com` for a US Cloud project.
+
 ### App Permissions
 
 The app requires these Shopify permissions:
